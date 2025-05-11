@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
 
-const Card = ({ title, year, size }) => {
+const Card = ({ title, year, id, size }) => {
   return (
-    <div className={`${styles.cardField} ${styles[size]}`}>
+    <Link
+      className={`${styles.cardField} ${styles[size]}`}
+      to={`/project/${id}`}
+    >
       <div className={styles.imgField}>
         <img alt={`${title} img`} />
       </div>
@@ -10,7 +14,7 @@ const Card = ({ title, year, size }) => {
         <p className={styles.title}>{title}</p>
         <p className={styles.year}>{year}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

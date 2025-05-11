@@ -1,5 +1,5 @@
-import TabList from "../components/Tab/TabList";
-import List from "../components/List/List";
+import TabList from "../../components/Tab/TabList";
+import List from "../../components/List/List";
 
 import styles from "./Article.module.css";
 
@@ -12,9 +12,7 @@ const Article = () => {
     { label: "Case Study", number: 0 },
   ];
 
-  const lists = [
-    // { title: "UX Enigneer란 무엇인가", date: "2025.05.12", id: 1 },
-  ];
+  const lists = [{ title: "UX Enigneer란 무엇인가", date: "2025.05.12" }];
 
   return (
     <div className={styles.content}>
@@ -26,7 +24,7 @@ const Article = () => {
               key={list.title}
               title={list.title}
               date={list.date}
-              id={list.id}
+              id={index}
             />
           ))
         ) : (

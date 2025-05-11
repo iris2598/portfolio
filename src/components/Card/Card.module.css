@@ -1,6 +1,8 @@
 .cardField {
   width: 100%;
   margin-bottom: 32px;
+  text-decoration: none;
+  color: inherit;
 }
 .sm {
   width: 40%;

@@ -1,5 +1,6 @@
-import TabList from "../components/Tab/TabList";
-import Card from "../components/Card/Card";
+import TabList from "../../components/Tab/TabList";
+import Card from "../../components/Card/Card";
+import { projects } from "../../data";
 
 import styles from "./Project.module.css";
 
@@ -15,26 +16,19 @@ const Project = () => {
     { label: "Study", number: 0 },
   ];
 
-  const cardList = [
-    { title: "UX Enigneer", year: "2025" },
-    { title: "UX Enigneer", year: "2025" },
-    { title: "UX Enigneer", year: "2025" },
-    { title: "UX Enigneer", year: "2025" },
-    { title: "UX Enigneer", year: "2025" },
-  ];
-
   return (
     <div className={styles.content}>
       <TabList tabs={tabList} />
       <div className={styles.projects}>
-        {cardList.map((card, index) => {
-          const isOddLength = cardList.length % 2 === 1;
-          const isLast = index === cardList.length - 1;
+        {projects.map((card, index) => {
+          const isOddLength = projects.length % 2 === 1;
+          const isLast = index === projects.length - 1;
 
           return (
             <Card
               title={card.title}
-              year={card.year}
+              year={card.period}
+              id={index}
               size={
                 isOddLength && isLast
                   ? "lg"

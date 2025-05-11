@@ -1,12 +1,13 @@
 import "./App.css";
-import Header from "./layout/Header";
-import Footer from "./layout/Footer";
+import Header from "./components/Layout/Header";
+import Footer from "./components/Layout/Footer";
 import { Route, Routes } from "react-router-dom";
-import Home from "./page/Home";
-import About from "./page/About";
-import Project from "./page/Project";
-import Article from "./page/Article";
-import ArticleDetail from "./page/ArticleDetail";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Project from "./pages/Project/Project";
+import Article from "./pages/Article/Article";
+import ArticleDetail from "./pages/Article/ArticleDetail";
+import ProjectDetail from "./pages/Project/ProjectDetail";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/project" element={<Project />} />
+        <Route path="/project/:id" element={<ProjectDetail />} />
         <Route path="/article" element={<Article />} />
         <Route path="/article/:id" element={<ArticleDetail />} />
       </Routes>

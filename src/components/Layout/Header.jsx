@@ -1,5 +1,6 @@
 import styles from "./Layout.module.css";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/Logo";
 
 const Header = () => {
   const menuList = [
@@ -9,7 +10,9 @@ const Header = () => {
   ];
   return (
     <header className={styles.header}>
-      <img className={styles.logo} alt="logo" />
+      <Link className={styles.logo} to={"/"}>
+        <Logo width={35} height={25} />
+      </Link>
       <div className={styles.menuList}>
         {menuList.map((menu, index) => (
           <Link className={styles.menu} to={`/${menu.to}`}>
