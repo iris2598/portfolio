@@ -1,0 +1,26 @@
+.tabList {
+  display: flex;
+  gap: 24px;
+  margin: 12px 0 44px 0;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  gap: 6px;
+  color: #b0b0bd;
+}
+.active {
+  color: #101011;
+}
+
+.label {
+  margin: 0;
+  font-size: 16pt;
+}
+.num {
+  margin: 0;
+  font-size: 12pt;
+}

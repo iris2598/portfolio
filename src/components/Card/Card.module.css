@@ -1,0 +1,37 @@
+.cardField {
+  width: 100%;
+  margin-bottom: 32px;
+}
+.sm {
+  width: 40%;
+}
+.mid {
+  width: 58%;
+}
+.lg {
+  width: 100%;
+}
+
+.imgField {
+  height: 350px;
+  background-color: aliceblue;
+}
+
+.textField {
+  width: fit-content;
+  margin-top: 16px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-size: 16pt;
+  margin: 0;
+}
+
+.year {
+  font-size: 12pt;
+  margin: 0;
+}

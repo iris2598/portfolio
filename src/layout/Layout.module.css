@@ -1,0 +1,46 @@
+.header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+}
+
+.menuList {
+  display: flex;
+  gap: 32px;
+}
+.menu {
+  text-decoration: none;
+  color: inherit;
+  font-size: 11pt;
+  font-weight: 600;
+}
+.menu:hover {
+  color: #2db400;
+}
+
+.footer {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: #b0b0bd 1px solid;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.email {
+  text-align: left;
+  margin: 0;
+  font-size: 10pt;
+  line-height: 16pt;
+}
