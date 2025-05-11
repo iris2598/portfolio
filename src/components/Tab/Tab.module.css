@@ -1,7 +1,7 @@
 .tabList {
   display: flex;
   gap: 24px;
-  margin: 12px 0 44px 0;
+  margin: 12px 0 12px 0;
 }
 
 .tab {

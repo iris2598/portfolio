@@ -12,14 +12,23 @@ const Article = () => {
     { label: "Case Study", number: 0 },
   ];
 
-  const lists = [];
+  const lists = [
+    // { title: "UX Enigneer란 무엇인가", date: "2025.05.12", id: 1 },
+  ];
 
   return (
     <div className={styles.content}>
       <TabList tabs={tabList} />
       <div className={styles.lists}>
         {lists.length ? (
-          lists.map((list, index) => <List key={list.title} />)
+          lists.map((list, index) => (
+            <List
+              key={list.title}
+              title={list.title}
+              date={list.date}
+              id={list.id}
+            />
+          ))
         ) : (
           <p className={styles.notice}>아직 작성된 글이 없습니다.</p>
         )}

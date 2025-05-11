@@ -12,7 +12,7 @@ const Header = () => {
       <img className={styles.logo} alt="logo" />
       <div className={styles.menuList}>
         {menuList.map((menu, index) => (
-          <Link className={styles.menu} to={`/${menu.label}`}>
+          <Link className={styles.menu} to={`/${menu.to}`}>
             {menu.label}
           </Link>
         ))}
