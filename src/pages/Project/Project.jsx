@@ -28,7 +28,9 @@ const Project = () => {
   tabCounts["All"] = projects.length;
 
   const filteredProjects =
-    activeTab === "All" ? projects : projects.filter((p) => p.tag == activeTab);
+    activeTab === "All"
+      ? projects
+      : projects.filter((p) => p.tag === activeTab);
 
   return (
     <div className={styles.content}>
