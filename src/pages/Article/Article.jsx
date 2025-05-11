@@ -1,5 +1,6 @@
 import { articles } from "../../data";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import TabList from "../../components/Tab/TabList";
 import List from "../../components/List/List";
 
@@ -42,7 +43,17 @@ const Article = () => {
             />
           ))
         ) : (
-          <p className={styles.notice}>아직 작성된 글이 없습니다.</p>
+          <motion.div
+            className={styles.notice}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false }}
+          >
+            아직 준비 중이에요.
+            <br />
+            조금만 기다려 주세요 :)
+          </motion.div>
         )}
       </div>
     </div>

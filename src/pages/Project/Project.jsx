@@ -1,6 +1,7 @@
 import TabList from "../../components/Tab/TabList";
 import Card from "../../components/Card/Card";
 import { projects } from "../../data";
+import { motion } from "framer-motion";
 
 import styles from "./Project.module.css";
 import { useState } from "react";
@@ -32,6 +33,8 @@ const Project = () => {
       ? projects
       : projects.filter((p) => p.tag === activeTab);
 
+  const projectNum = filteredProjects.length;
+
   return (
     <div className={styles.content}>
       <TabList
@@ -41,25 +44,39 @@ const Project = () => {
         tabCounts={tabCounts}
       />
       <div className={styles.projects}>
-        {filteredProjects.map((card, index) => {
-          const isOddLength = projects.length % 2 === 1;
-          const isLast = index === projects.length - 1;
+        {projectNum === 0 ? (
+          <motion.div
+            className={styles.notice}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false }}
+          >
+            아직 준비 중이에요.
+            <br />
+            조금만 기다려 주세요 :)
+          </motion.div>
+        ) : (
+          filteredProjects.map((card, index) => {
+            const isOddLength = projectNum % 2 === 1;
+            const isLast = index === projectNum - 1;
 
-          return (
-            <Card
-              title={card.title}
-              year={card.period}
-              id={index}
-              size={
-                isOddLength && isLast
-                  ? "lg"
-                  : index % 4 === 0 || index % 4 === 3
-                  ? "sm"
-                  : "mid"
-              }
-            />
-          );
-        })}
+            return (
+              <Card
+                title={card.title}
+                year={card.period}
+                id={index}
+                size={
+                  isOddLength && isLast
+                    ? "lg"
+                    : index % 4 === 0 || index % 4 === 3
+                    ? "sm"
+                    : "mid"
+                }
+              />
+            );
+          })
+        )}
       </div>
     </div>
   );

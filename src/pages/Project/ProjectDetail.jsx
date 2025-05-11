@@ -20,16 +20,19 @@ const ProjectDetail = () => {
         <div className={styles.subField}>
           <div className={styles.period}>
             <p className={styles.label}>
-              <strong>Period </strong>
+              <strong>Period</strong>
             </p>
             <p className={styles.text}>{project.period}</p>
           </div>
-          <div className={styles.description}>
-            <p className={styles.text}>{project.description}</p>
+          <div className={styles.contribution}>
+            <p className={styles.label}>
+              <strong>Contribution</strong>
+            </p>
+            <p className={styles.text}>{project.contribution}</p>
           </div>
         </div>
       </div>
-      <div className={styles.detail}>{project.img}</div>
+      <div className={styles.detail}>{project.detail}</div>
     </div>
   );
 };

@@ -5,11 +5,17 @@
 
 .projects {
   width: 100%;
-  height: 60vh;
   display: flex;
   flex-wrap: wrap;
   gap: 2%;
   margin-top: 28px;
+}
+.notice {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project {
@@ -30,6 +36,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  margin: 20px 0 60px 0;
 }
 .titleField {
   width: 80%;
@@ -39,25 +46,26 @@
   gap: 4px;
 }
 .title {
-  font-size: 32pt;
+  font-size: 40pt;
 }
 .subtitle {
   font-size: 24pt;
+  font-weight: 800;
 }
 .subField {
   width: 16%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
+  gap: 8px;
+  margin-bottom: 4px;
 }
 .period {
   display: flex;
   font-size: 12pt;
   gap: 8px;
 }
-.description {
-  display: flex;
+.contribution {
   font-size: 12pt;
   gap: 8px;
   text-align: left;
@@ -72,4 +80,6 @@
 .detail {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
 }

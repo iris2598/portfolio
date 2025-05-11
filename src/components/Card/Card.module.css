@@ -3,7 +3,12 @@
   margin-bottom: 32px;
   text-decoration: none;
   color: inherit;
+  overflow: hidden;
 }
+.cardField:hover .imgField img {
+  transform: scale(1.05);
+}
+
 .sm {
   width: 40%;
 }
@@ -17,6 +22,7 @@
 .imgField {
   height: 350px;
   background-color: aliceblue;
+  overflow: hidden;
 }
 
 .textField {
