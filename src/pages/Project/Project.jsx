@@ -3,24 +3,43 @@ import Card from "../../components/Card/Card";
 import { projects } from "../../data";
 
 import styles from "./Project.module.css";
+import { useState } from "react";
+
+const tabList = [
+  "All",
+  "Web",
+  "Moblie",
+  "Digital",
+  "Branding",
+  "Editorial",
+  "Visual",
+  "Study",
+];
 
 const Project = () => {
-  const tabList = [
-    { label: "All", number: 8 },
-    { label: "Web", number: 2 },
-    { label: "Moblie", number: 3 },
-    { label: "Digital", number: 0 },
-    { label: "Branding", number: 1 },
-    { label: "Editorial", number: 1 },
-    { label: "Visual", number: 1 },
-    { label: "Study", number: 0 },
-  ];
+  const [activeTab, setActiveTab] = useState("All");
+
+  const tabCounts = projects.reduce((acc, project) => {
+    const t = project.tag;
+    acc[t] = (acc[t] || 0) + 1;
+    return acc;
+  }, {});
+
+  tabCounts["All"] = projects.length;
+
+  const filteredProjects =
+    activeTab === "All" ? projects : projects.filter((p) => p.tag == activeTab);
 
   return (
     <div className={styles.content}>
-      <TabList tabs={tabList} />
+      <TabList
+        tabs={tabList}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        tabCounts={tabCounts}
+      />
       <div className={styles.projects}>
-        {projects.map((card, index) => {
+        {filteredProjects.map((card, index) => {
           const isOddLength = projects.length % 2 === 1;
           const isLast = index === projects.length - 1;
 
