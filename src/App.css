@@ -1,6 +1,13 @@
 .App {
   text-align: center;
-  margin: 0px 100px 0px 100px;
+  padding: 0px 100px 0px 100px;
+}
+.dark {
+  background-color: #101011;
+  background-image: url("./assets/Road.png"); /* 질감 이미지 */
+  background-size: cover; /* 필요에 따라 contain/fixed 가능 */
+  background-repeat: repeat;
+  background-blend-mode: difference; /* or overlay, soft-light 등 */
 }
 
 .App-logo {
