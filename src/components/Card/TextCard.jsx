@@ -1,13 +1,7 @@
 import styles from "./Card.module.css";
 import RightIcon from "../../assets/RightIcon";
-import { useState } from "react";
 
-const TextCard = ({ num, index, title, period, text }) => {
-  const [current, setCurrent] = useState(index);
-  const onClick = () => {
-    setCurrent(index + 1);
-  };
-
+const TextCard = ({ num, index, title, period, text, onClick }) => {
   return (
     <div className={styles.textCard}>
       <div className={styles.content}>
@@ -21,7 +15,7 @@ const TextCard = ({ num, index, title, period, text }) => {
           ))}
         </ul>
       </div>
-      {num >= 2 && index < num && (
+      {index < num - 1 && (
         <button className={styles.nextBtn} onClick={onClick}>
           <RightIcon />
         </button>

@@ -37,7 +37,7 @@ function App() {
         <Route path="/article" element={<Article />} />
         <Route path="/article/:id" element={<ArticleDetail />} />
       </Routes>
-      {!isHome || (!isAbout && <Footer />)}
+      {!isHome && !isAbout && <Footer />}
     </div>
   );
 }
