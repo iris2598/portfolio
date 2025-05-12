@@ -13,6 +13,7 @@ import { useState, useEffect } from "react";
 function App() {
   const location = useLocation();
   const isHome = location.pathname === "/portfolio";
+  const isAbout = location.pathname === "/about";
 
   // const [darkMode, setDarkMode] = useState(false);
   // const toggleDarkMode = () => setDarkMode(!darkMode);
@@ -36,7 +37,7 @@ function App() {
         <Route path="/article" element={<Article />} />
         <Route path="/article/:id" element={<ArticleDetail />} />
       </Routes>
-      {!isHome && <Footer />}
+      {!isHome || (!isAbout && <Footer />)}
     </div>
   );
 }
