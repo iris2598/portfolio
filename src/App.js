@@ -30,6 +30,7 @@ function App() {
     <div className={isHome ? "App dark" : "App"}>
       {!isHome && <Header />}
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/portfolio/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/project" element={<Project />} />
