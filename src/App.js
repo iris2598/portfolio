@@ -12,7 +12,8 @@ import { useState, useEffect } from "react";
 
 function App() {
   const location = useLocation();
-  const isHome = location.pathname === "/portfolio";
+  const isHome =
+    location.pathname === "/portfolio" || location.pathname === "/portfolio/";
   const isAbout = location.pathname === "/about";
 
   // const [darkMode, setDarkMode] = useState(false);
