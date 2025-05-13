@@ -10,7 +10,7 @@ const Header = () => {
   ];
   return (
     <header className={styles.header}>
-      <Link className={styles.logo} to={"/portfolio"}>
+      <Link className={styles.logo} to={"/portfolio/"}>
         <Logo width={35} height={25} />
       </Link>
       <div className={styles.menuList}>
