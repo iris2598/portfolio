@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import styles from "./Card.module.css";
 
-const Card = ({ title, year, id, size }) => {
+const Card = ({ img, title, year, id, size }) => {
   const MotionLink = motion(Link);
 
   return (
@@ -15,7 +15,7 @@ const Card = ({ title, year, id, size }) => {
       viewport={{ once: false }}
     >
       <div className={styles.imgField}>
-        <img alt={`${title} img`} />
+        <img className={styles.img} src={img} alt={`${title} img`} />
       </div>
       <div className={styles.textField}>
         <p className={styles.title}>{title}</p>

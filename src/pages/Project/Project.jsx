@@ -63,6 +63,7 @@ const Project = () => {
 
             return (
               <Card
+                img={card.mainImg}
                 title={card.title}
                 year={card.period}
                 id={index}

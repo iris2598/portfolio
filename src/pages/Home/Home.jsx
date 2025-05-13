@@ -28,7 +28,7 @@ const Home = () => {
           <Logo width={50} height={40} color="white" />
           Portfolio
         </Link>
-        Between hesitation and action, I draw the lines.
+        Between hesitation and action, draw the lines.
       </motion.div>
       <motion.div
         className={styles.menuImg}
